@@ -1,0 +1,45 @@
+.banner-wrapper{
+    width: 100vw;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.banner-left{
+    width: 40%;
+}
+.banner-image{
+    width : 250px;
+    object-fit: contain;
+}
+.banner-right{
+    width: 58%;
+}
+.banner-content{
+    width: 100%;
+    margin-top: 15%;
+}
+.banner-title{
+    text-align: left;
+    font-family: 'Oswald', sans-serif;
+    font-size: 80px;
+    color: var(--navbar-brand-color);
+}
+.banner-description{
+    width : 90%;
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    color: var(--navbar-brand-color);
+    text-align: left;
+}
+.banner-buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-top: 3%;
+}
+.icon-1,.icon-2,.icon-3{
+    font-size: 40px;
+    height: 10rem;
+}

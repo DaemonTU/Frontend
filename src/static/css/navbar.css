@@ -1,0 +1,35 @@
+.navbar-wrapper{
+    width: 90vw;
+    min-height: 5rem;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar-brand{
+    width: 40%;
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+    color: var(--navbar-brand-color);
+}
+.navbar-options-wrapper{
+    width: 30%;
+    padding-right: 50px;
+}
+.navbar-options-list{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar-item{
+    font-family: 'Oswald', sans-serif;
+    color: #ff0000da;
+    letter-spacing: 0.02cm;
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
