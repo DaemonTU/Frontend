@@ -17,9 +17,11 @@ function Navbar(){
                     <li className="navbar-item">
                             NOTIFICATIONS
                     </li>
+                    <Link to="/team" style={{"textDecoration": "none"}}>
                     <li className="navbar-item">
                             TEAM
                     </li>
+                    </Link>
                 </ul>
             </div>
         </div>

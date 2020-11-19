@@ -1,9 +1,12 @@
 import React, {useEffect} from 'react';
+import Navbar from './navbar';
 import '../static/css/banner.css';
 import bannerImage from '../static/assets/motherboard.png';
 import {FaChevronRight} from 'react-icons/fa';
 function Banner(){
     return(
+        <React.Fragment>
+        <Navbar />
         <div className="banner-wrapper">
             <div className="banner-left">
                 <img  className="banner-image" alt="daemon-motherboard" src={bannerImage} />
@@ -34,6 +37,7 @@ function Banner(){
                 </div>
             </div>
         </div>
+        </React.Fragment>
     );
 }
 
