@@ -69,8 +69,7 @@ function Team(){
                                     <GoTools className="dev-icon" style={{fill: '#01ff01'}} /> {member.dept}
                                 </div>
                             </div>
-                            <div className="h-full flex flex-col items-center 
-                            mx-auto text-center cards">
+                            <div className="h-full flex flex-col items-center mx-auto text-center cards">
                                 <img alt="team" 
                                 className="flex-shrink-0 rounded-lg mb-4 team-member" 
                                 src={member.avatar} />

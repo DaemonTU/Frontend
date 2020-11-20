@@ -1,0 +1,54 @@
+@font-face{
+    font-family: news;
+    src: url("../fonts/lexo.ttf");
+}
+body{
+    background-color: #282828;
+}
+.top-news-headlines{
+    font-family: news;
+    font-size: 50px;
+    width : 60vw;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.news-wrapper{
+    width : 90vw;
+    margin: auto;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+}
+.news-block{
+    width: 90%;
+    margin: auto;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: row;
+    padding: 5px 5px;
+    border: 2px solid #929292;
+    border-radius: 5px;
+}
+.news-poster{
+    width: 30%;
+    margin-right: 10px;
+}
+.news-image{
+    width: 250px;
+    object-fit: contain;
+}
+.news-content{
+    width: 80%;
+}
+.news-headline{
+    font-size: 25px;
+    font-weight: bold;
+    text-align: left;
+}
+.news-description{
+    font-size: 18px;
+    text-align: left;
+    color: grey;
+}

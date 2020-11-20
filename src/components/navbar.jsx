@@ -14,9 +14,11 @@ function Navbar(){
                     <li className="navbar-item">
                             PAYMENTS
                     </li>
+                    <Link to="/news">
                     <li className="navbar-item">
-                            NOTIFICATIONS
+                            NEWS
                     </li>
+                    </Link>
                     <Link to="/team" style={{"textDecoration": "none"}}>
                     <li className="navbar-item">
                             TEAM
