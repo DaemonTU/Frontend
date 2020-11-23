@@ -1,5 +1,6 @@
 import React,{useState,useEffect} from 'react';
 import '../static/css/news.css';
+import {Link} from 'react-router-dom';
 import Navbar from './navbar';
 function News(){
     const[news,setNews] = useState([])
@@ -32,6 +33,7 @@ function News(){
                 {news && 
                 <React.Fragment>
                     {news.map(item => (
+                    <Link to={item.original_link}>
                     <div className="news-block">
                         <div className="news-poster">
                             <img src={item.poster} alt="news-poster" className="news-image" />
@@ -44,7 +46,8 @@ function News(){
                                 {descriptionShortener(item.description,200)}
                             </div>
                         </div>
-                    </div>        
+                    </div>
+                    </Link>        
                     ))}
                 </React.Fragment>
                 }

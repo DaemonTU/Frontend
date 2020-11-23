@@ -24,6 +24,11 @@ function Navbar(){
                             TEAM
                     </li>
                     </Link>
+                    <Link to="/post" style={{"textDecoration": "none"}}>
+                    <li className="navbar-item">
+                            SHARE
+                    </li>
+                    </Link>
                 </ul>
             </div>
         </div>
