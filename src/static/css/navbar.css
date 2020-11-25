@@ -29,6 +29,7 @@
     color: #ff0000da;
     letter-spacing: 0.02cm;
     list-style-type: none;
+    cursor: pointer;
 }
 a{
     text-decoration: none;

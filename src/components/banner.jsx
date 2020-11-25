@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import Navbar from './navbar';
 import '../static/css/banner.css';
 import bannerImage from '../static/assets/motherboard.png';

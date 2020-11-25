@@ -3,6 +3,7 @@ import Banner from './components/banner';
 import Team from './components/teamPage';
 import News from './components/news';
 import DaemonShare from './components/daemonShare';
+import Login from './components/login';
 import {BrowserRouter as Router,
 Switch,Route
 } from 'react-router-dom';
@@ -15,6 +16,7 @@ function App() {
           <Route path="/team" exact component={Team} />
           <Route path="/news" exact component={News} />
           <Route path="/post" exact component={DaemonShare} />
+          <Route path="/login" exact component={Login} />
         </Switch>
       </div>
     </Router>

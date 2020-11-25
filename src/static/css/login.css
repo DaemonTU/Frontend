@@ -1,0 +1,9 @@
+body{
+    background-color: black;
+}
+.login-header{
+    width: 80vw;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 50px;
+}
