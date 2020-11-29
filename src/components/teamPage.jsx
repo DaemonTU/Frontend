@@ -70,7 +70,7 @@ function Team(){
                                 </div>
                             </div>
                             <div className="h-full flex flex-col items-center mx-auto text-center cards">
-                                <div className="rank-tag">777</div>
+                                <div className={member.rank==="777"? "rank-tag green":"rank-tag red"}>{member.rank}</div>
                                 <img alt="team" 
                                 className="flex-shrink-0 rounded-lg mb-4 team-member" 
                                 src={member.avatar} />
