@@ -7,6 +7,7 @@ function DaemonShare(){
     const[markdown,setMarkdown] = useState("");
     const[title,setTitle] = useState("");
     const[show,setShow] = useState("none");
+    const[message,setMessage] = useState("");
     const[borderBottom,setBorderBottom] = useState("edit");
 
     function updateMarkdown(markText){
@@ -15,6 +16,23 @@ function DaemonShare(){
     function setStyle(el,st){
         setShow(el);
         setBorderBottom(st);
+    }
+    const PublishPost = () => {
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST',"http://127.0.0.1:5000/api/user/login",true);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhr.responseType = 'json';
+        xhr.addEventListener('load',() => {
+            if(xhr.status === 200){
+                if(xhr.response.token){
+                    setMessage(xhr.response.message);
+                    window.location.reload();
+                    window.alert(message);
+                }
+            }
+        })
+        xhr.send(`title=${title}&desc=${markdown}`);
+        return;
     }
     return(
         <React.Fragment>
