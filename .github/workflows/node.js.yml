@@ -19,5 +19,5 @@ jobs:
         run: npm ci
       - name: Build Code
         run: npm build --if-present
-      - name: Run Code
-        run: npm start
+      - name: Test Code
+        run: npm test
