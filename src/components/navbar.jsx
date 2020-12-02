@@ -2,6 +2,11 @@ import React from 'react';
 import '../static/css/navbar.css';
 import {Link,Redirect} from 'react-router-dom';
 function Navbar(){
+    function logoutUser(){
+        sessionStorage.removeItem('user_token'); 
+        document.cookie = 'session=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+        window.location.href="http://daemon.abbhutto.com/login"
+    }
     return(
         <React.Fragment>
         {sessionStorage.getItem('user_token') && <Redirect to="/" />}
@@ -31,7 +36,7 @@ function Navbar(){
                             SHARE
                     </li>
                     </Link>
-                    <li className="navbar-item" onClick={() => {sessionStorage.removeItem('user_token'); window.location.href="http://daemon.abbhutto.com/login"}}>
+                    <li className="navbar-item" onClick={() => logoutUser()}>
                             LOGOUT
                     </li>
                 </ul>
