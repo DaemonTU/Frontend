@@ -1,6 +1,6 @@
 import React from 'react';
 import '../static/css/navbar.css';
-import {Link} from 'react-router-dom';
+import {Link,Redirect} from 'react-router-dom';
 function Navbar(){
     return(
         <React.Fragment>
