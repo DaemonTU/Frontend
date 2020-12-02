@@ -4,6 +4,16 @@ import {Redirect} from 'react-router-dom';
 import Terminal from 'terminal-in-react';
 import loginImage from '../static/assets/figlet_daemon.PNG'
 function Login(){
+    function getCookie(){
+        let cookieArr = document.cookie.split(";");
+        for(var i=0; i<cookieArr.length; i++){
+            let cookiePair = cookieArr[i].split("=");
+            if(cookiePair[0].trim() === "session"){
+                return decodeURIComponent(cookiePair[1]);
+            }
+        }
+        return;
+    }
     const Login = (username,password) => {
         const xhr = new XMLHttpRequest();
         xhr.open('POST',"http://127.0.0.1:5000/api/user/login",true);
@@ -13,7 +23,10 @@ function Login(){
             if(xhr.status === 200){
                 if(xhr.response.token){
                     sessionStorage.setItem('user_token', JSON.stringify(xhr.response.token));
-                    window.location.reload();
+                    let sessionVar = getCookie()
+                    if (sessionVar){
+                        window.location.reload();
+                    }
                 }else{
                     window.alert(xhr.response.message);
                 }
