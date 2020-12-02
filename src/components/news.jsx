@@ -7,7 +7,7 @@ function News(){
     useEffect(() => {
         function fetchNewsArticles(){
             const xhr = new XMLHttpRequest();
-            xhr.open('GET',"http://127.0.0.1:5000/api/news",true);
+            xhr.open('GET',"http://daemon.abbhutto.com/api/news",true);
             xhr.responseType='json';
             xhr.addEventListener('load',() => {
                 if(xhr.status === 200){
