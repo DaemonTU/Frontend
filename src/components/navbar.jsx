@@ -31,7 +31,7 @@ function Navbar(){
                             SHARE
                     </li>
                     </Link>
-                    <li className="navbar-item" onClick={() => {sessionStorage.removeItem('user_token'); window.location.href="http://127.0.0.1:3000/login"}}>
+                    <li className="navbar-item" onClick={() => {sessionStorage.removeItem('user_token'); window.location.href="http://daemon.abbhutto.com/login"}}>
                             LOGOUT
                     </li>
                 </ul>
