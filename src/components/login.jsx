@@ -4,29 +4,16 @@ import {Redirect} from 'react-router-dom';
 import Terminal from 'terminal-in-react';
 import loginImage from '../static/assets/figlet_daemon.PNG'
 function Login(){
-    function getCookie(){
-        let cookieArr = document.cookie.split(";");
-        for(var i=0; i<cookieArr.length; i++){
-            let cookiePair = cookieArr[i].split("=");
-            if(cookiePair[0].trim() === "session"){
-                return decodeURIComponent(cookiePair[1]);
-            }
-        }
-        return;
-    }
     const Login = (username,password) => {
         const xhr = new XMLHttpRequest();
-        xhr.open('POST',"http://127.0.0.1:5000/api/user/login",true);
+        xhr.open('POST',"http://daemon.abbhutto.com/api/user/login",true);
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         xhr.responseType = 'json';
         xhr.addEventListener('load',() => {
             if(xhr.status === 200){
                 if(xhr.response.token){
                     sessionStorage.setItem('user_token', JSON.stringify(xhr.response.token));
-                    let sessionVar = getCookie()
-                    if (sessionVar){
-                        window.location.reload();
-                    }
+                    window.location.reload();
                 }else{
                     window.alert(xhr.response.message);
                 }
@@ -37,7 +24,7 @@ function Login(){
     }
     const AddUser = (user,upass,admin,apass) => {
         const xhr = new XMLHttpRequest();
-        xhr.open('POST',"http://127.0.0.1:5000/api/user/add",true);
+        xhr.open('POST',"http://daemon.abbhutto.com/api/user/add",true);
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         xhr.responseType = 'json';
         xhr.addEventListener('load',() => {

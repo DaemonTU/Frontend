@@ -3,6 +3,8 @@ import '../static/css/navbar.css';
 import {Link} from 'react-router-dom';
 function Navbar(){
     return(
+        <React.Fragment>
+        {sessionStorage.getItem('user_token') && <Redirect to="/" />}
         <div className="navbar-wrapper">
             <Link to="/">
                 <div className="navbar-brand">
@@ -35,6 +37,7 @@ function Navbar(){
                 </ul>
             </div>
         </div>
+        </React.Fragment>
     );
 }
 
