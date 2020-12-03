@@ -4,6 +4,7 @@ import Team from './components/teamPage';
 import News from './components/news';
 import DaemonShare from './components/daemonShare';
 import Login from './components/login';
+import AdminTerminal from './components/terminal';
 import {BrowserRouter as Router,
 Switch,Route
 } from 'react-router-dom';
@@ -17,6 +18,7 @@ function App() {
           <Route path="/news" exact component={News} />
           <Route path="/post" exact component={DaemonShare} />
           <Route path="/login" exact component={Login} />
+          <Route path="/terminal" exact component={AdminTerminal} />
         </Switch>
       </div>
     </Router>
