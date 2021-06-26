@@ -33,7 +33,7 @@ function News(){
                 {news && 
                 <React.Fragment>
                     {news.map(item => (
-                    <Link to={item.original_link}>
+                    <Link to={item.original_link.substring(1)}>
                     <div className="news-block">
                         <div className="news-poster">
                             <img src={item.poster} alt="news-poster" className="news-image" />
